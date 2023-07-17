@@ -46,8 +46,6 @@ const webpackConfig = <T extends { production: boolean; development: boolean }>(
     }),
     new webpack.DefinePlugin({
       'process.env.PRODUCTION': env.production || !env.development,
-      // 'process.env.NAME': JSON.stringify(require('package.json').name),
-      // 'process.env.VERSION': JSON.stringify(require('package.json').version),
     }),
     new ForkTsCheckerWebpackPlugin(),
     new ESLintPlugin({ files: './src/**/*.{ts,tsx,js,jsx}' }),
